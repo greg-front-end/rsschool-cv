@@ -51,3 +51,13 @@ function dataReverse(data) {
 _Some little projects_...
 
 ---
+
+### EDUCATION AND COURSES
+- FreeCodeCamp Responsive Web Design
+- FreeCodeCamp JavaScript Algorithms and Data Structures
+- Stepic-educational platform - JavaScript for beginners
+- Stepic-educational platform - Responsive Web Design for beginners: HTML и CSS
+- University of netology- HTML and CSS for beginers
+- CS50 LECTURES
+
+---
