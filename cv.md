@@ -19,3 +19,18 @@ I continue to develop in my field. I continue to work on myself and on the quali
 In my free time I like to read books and go to the GYM
 
 ---
+
+### SKILLS
+- HTML
+- CSS
+- JavaScript
+- Frameworks: bootstrap, jquery
+- Preprocessors: pug, scss
+- CMS: wordpress, opencart
+- Git, GitHub
+- Figma
+- Gulp, Webpack
+- BEM methodology
+- IDE: VScode, Atom, Sublime
+
+---
