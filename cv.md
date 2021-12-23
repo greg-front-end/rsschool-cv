@@ -61,3 +61,6 @@ _Some little projects_...
 - CS50 LECTURES
 
 ---
+
+### LANGUAGE
+- English: A2
