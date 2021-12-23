@@ -34,3 +34,15 @@ In my free time I like to read books and go to the GYM
 - IDE: VScode, Atom, Sublime
 
 ---
+
+### CODE EXAMPLE
+```javascript
+function dataReverse(data) {
+  const reverseData = []
+  for (let i = 0; i < data.length; i += 8) {
+    reverseData.unshift(...data.slice(i, i + 8))
+  }
+  return reverseData
+}
+```
+---
