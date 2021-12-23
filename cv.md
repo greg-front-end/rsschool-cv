@@ -46,3 +46,8 @@ function dataReverse(data) {
 }
 ```
 ---
+
+### WORK EXPERIENCE
+_Some little projects_...
+
+---
