@@ -1069,4 +1069,56 @@ section {
   }
 }
 
+/*=============== HIRE ME section ===============*/
+.hire {
+  margin-bottom: 3rem;
+}
+.hire__inner {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.hire__title {
+  opacity: 0;
+  transform: translateY(50%);
+}
+.hire__left {
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.hire__right {
+  opacity: 0;
+  transform: translateX(50%);
+}
+.hire__right-img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: 2px;
+  object-position: -5rem;
+}
+@media screen and (max-width: 467px) {
+  .form {
+    padding: 0;
+  }
+  .form button {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hire__left {
+    flex: 0 0 44%;
+  }
+  .hire__right {
+    flex: 0 0 44%;
+    display: block;
+    max-height: 492px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hire__left {
+    max-width: 50%;
+  }
+}
+
 
