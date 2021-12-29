@@ -71,4 +71,34 @@ window.addEventListener('DOMContentLoaded', () => {
       })
   }
 
+  // ====================== ANIMATION FOR SKILLS ====================== //
+  const html = document.querySelector('.skills__html');
+  const css = document.querySelector('.skills__css');
+  const js = document.querySelector('.skills__js');
+  const skillsValue = document.querySelectorAll('.skills__value');
+  // GET VALUES FROM SKILLS 
+  let widthVal = [];
+  skillsValue.forEach(function (i, width) {
+    widthVal.push(i.innerHTML);
+  });
+  // SECTION SKILLS 
+  const skillsSection = document.querySelector('#skills')
+  // NEW METHOD FOR OBSERVE SECTION AND ADD SOME ANIMATION
+  let skillsObserv = new IntersectionObserver(skillsCallBack, {threshold: 0.7});
+  // FUNCTION FOR OBSERVE WHICH WILL DO ONLY ONCE
+  function skillsCallBack(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return
+      }
+      html.style.cssText = `opacity: 1; width: ${widthVal[0]};`
+      css.style.cssText = `opacity: 1; width: ${widthVal[1]};`
+      js.style.cssText = `opacity: 1; width: ${widthVal[2]};`
+
+      observer.unobserve(entry.target);
+    })
+  }
+  // START OBSERVING OF SKILLS SECTION
+  skillsObserv.observe(skillsSection);
+
 });
