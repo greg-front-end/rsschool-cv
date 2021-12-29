@@ -874,4 +874,65 @@ section {
   padding-bottom: 1.8rem;
 }
 
+/*=============== EDUCATION section ===============*/
+.educ__inner {
+  background-color: var(--text-color);
+  padding: clamp(0.1rem, calc(32 / 1200 * 100vw), 2rem);
+  padding: 1.5rem 0.9rem;
+}
+.educ__item{
+  padding: 1rem;
+  box-shadow: -6px 0 var(--yellow);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .educ__item {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.educ__info {
+  flex: 0 0 30%;
+  padding-right: 0.6rem;
+}
+.educ__cont {
+  flex: 0 0 calc(60% - 4rem);
+}
+.educ__info-title {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.educ__date {
+  display: block;
+  text-align: right;
+  color: var(--text-color);
+  font-size: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.educ__date time {
+  padding: 0.3rem;
+  background-color: var(--yellow);
+  border-radius: 2px;
+}
+
+.educ__cont-title {
+  margin-bottom: 0.8rem;
+}
+.educ__cont-text {
+  margin-bottom: 1rem;
+}
+.educ__cont-link {
+  color: var(--yellow);
+  text-decoration: none;
+  text-align: right;
+  display: block;
+  transition: all 0.3s;
+}
+.educ__cont-link:hover {
+  color: var(--bg-inner);
+}
+
 
