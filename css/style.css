@@ -304,3 +304,31 @@ section {
   animation-fill-mode: forwards;
 }
 
+/*=============== FORMS ===============*/
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--text-color);
+  align-items: start;
+  padding: 1.5rem;
+  font-weight: var(--font-medium);
+}
+.form label {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.form__input-name,
+.form__input-email,
+.form__area {
+  background-color: var(--bg-colors);
+  width: 100%;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.5rem;
+}
+.form__area {
+  min-height: 10rem;
+  resize: none;
+}
+
+
