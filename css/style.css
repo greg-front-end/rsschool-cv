@@ -93,3 +93,91 @@ input {
   max-width: 1920px;
   margin: 0 auto;
 }
+
+/*========== Variables for Dark theme ==========*/
+body.dark-theme {
+  background-color: var(--bg-inner);
+  color: var(--bg-colors);
+}
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: var(--main-title);
+}
+body.dark-theme .header__inner,
+body.dark-theme .intro__inner,
+body.dark-theme .about__inner,
+body.dark-theme .skills__inner,
+body.dark-theme .educ__inner,
+body.dark-theme .portfolio__inner,
+body.dark-theme .hire__inner,
+body.dark-theme .hire__form {
+  background-color: var(--bg-inner);
+  color: var(--text-color);
+}
+body.dark-theme .header__inner {
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.4);
+}
+body.dark-theme .nav__link {
+  color: var(--main-title);
+}
+body.dark-theme .nav__link g > path {
+  fill: var(--main-title);
+}
+
+body.dark-theme .skills__inner {
+  background-color: var(--dark-view2);
+}
+body.dark-theme .educ__item {
+  background-color: var(--dark-view2);
+}
+body.dark-theme button.portf__filter-btn {
+  color: var(--text-color);
+}
+body.dark-theme button.portf__filter-btn:hover {
+  color: var(--yellow);
+}
+body.dark-theme button.portf__filter-btn--active {
+  color: var(--yellow);
+}
+body.dark-theme .educ__cont-link:hover {
+  color: var(--text-color);
+}
+body.dark-theme .my-code__inner {
+  background-color: var(--dark-view2);
+}
+body.dark-theme .footer {
+  background-color: var(--dark-view);
+}
+body.dark-theme .footer__link {
+  color: var(--text-color);
+}
+body.dark-theme .footer__rss-link {
+  fill: var(--text-color);
+}
+body.dark-theme .footer__rss-link-js {
+  fill: var(--bg-inner);
+}
+
+@media screen and (max-width: 767px) {
+  body.dark-theme .ri-sun-line {
+    color: var(--yellow);
+  }
+  body.dark-theme .nav__list {
+    background-color: var(--dark-view);
+    color: var(--text-color);
+  }
+}
+@media screen and (min-width: 768px) {
+  body.dark-theme .ri-contrast-2-fill {
+    color: var(--yellow);
+    transition: all 0.3s;
+  }
+  body.dark-theme .ri-contrast-2-fill:hover {
+    color: var(--yellow)
+  }
+}
+
