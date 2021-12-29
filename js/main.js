@@ -33,4 +33,28 @@ window.addEventListener('DOMContentLoaded', () => {
   // Observ Hire me section
   observSections('.hire', '.hire__title', '.hire__left', '.hire__right');
 
+  // ====================== SHOW MENU ====================== //
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav');
+
+  if (burger) {
+    burger.addEventListener('click', () => {
+      if (nav) {
+        nav.classList.toggle('active')
+        burger.classList.toggle('open')
+      }
+    })
+  }
+
+  // ====================== REMOVE MENU WHEN CLICK LINKS ====================== //
+  const links = document.querySelectorAll('.nav__link')
+  const linkAction = () => {
+    nav.classList.remove('active')
+    burger.classList.remove('open')
+  }
+  links.forEach(link => {
+    link.addEventListener('click', linkAction)
+  })
+
+
 });
