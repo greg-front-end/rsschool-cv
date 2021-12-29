@@ -101,4 +101,83 @@ window.addEventListener('DOMContentLoaded', () => {
   // START OBSERVING OF SKILLS SECTION
   skillsObserv.observe(skillsSection);
 
+  // ====================== FILTER FOR PORTFOLIO GALLERY ====================== //
+  function filter() {
+    const filter = document.querySelector('.portf__filter-list'),
+          filterBtns = document.querySelectorAll('.portf__filter-btn'),
+          cards = document.querySelectorAll('.portf__card');
+
+    function hideCards(category, items) {
+        items.forEach(item => {
+            const isItemFiltered = !item.classList.contains(category),
+                  isShowAll = category.toLowerCase() === 'all';
+            if (isItemFiltered && !isShowAll) {
+                item.classList.add('anim');
+            } else {
+                item.classList.remove('anim');
+                item.classList.remove('hide');
+            }
+        });
+    }
+    // remove all active btn in filter 
+    function remActiveBtn () {
+      filterBtns.forEach(btn => btn.classList.remove('portf__filter-btn--active'))
+    }
+    // add active style for btn which clicked
+    function showActiveBtn(btn) {
+      btn.classList.add('portf__filter-btn--active');
+    }
+
+    filterBtns.forEach(btn => {
+        const isFiltered = btn.dataset.filter;
+        btn.addEventListener('click', (e) => {
+          const clickBtn = e.target;
+            if (isFiltered) {
+                remActiveBtn()
+                showActiveBtn(clickBtn)
+                hideCards(isFiltered, cards);
+            }
+        });
+    });
+    
+    cards.forEach(card => {
+        card.ontransitionend = function() {
+            if (card.classList.contains('anim')) {
+                card.classList.add('hide');
+            }
+        };
+    });
+  }
+  filter();
+
+   /*==================== DARK LIGHT THEME ====================*/ 
+   const themeButton = document.getElementById('theme-btn');
+   const darkTheme = 'dark-theme';
+   const iconTheme = 'ri-sun-line';
+ 
+   // Previously selected topic (if user selected)
+   const selectedTheme = localStorage.getItem('selected-theme');
+   const selectedIcon = localStorage.getItem('selected-icon');
+ 
+   // We obtain the current theme that the interface has by validating the dark-theme class
+   const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+   const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-contrast-2-fill' : 'ri-sun-line';
+ 
+   // We validate if the user previously chose a topic
+   if (selectedTheme) {
+     // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+     themeButton.classList[selectedIcon === 'ri-contrast-2-fill' ? 'add' : 'remove'](iconTheme);
+   }
+ 
+   // Activate / deactivate the theme manually with the button
+   themeButton.addEventListener('click', () => {
+       // Add or remove the dark / icon theme
+       document.body.classList.toggle(darkTheme);
+       themeButton.classList.toggle(iconTheme);
+       // We save the theme and the current icon that the user chose
+       localStorage.setItem('selected-theme', getCurrentTheme());
+       localStorage.setItem('selected-icon', getCurrentIcon());
+   });
+
 });
