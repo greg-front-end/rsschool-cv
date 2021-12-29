@@ -1121,4 +1121,52 @@ section {
   }
 }
 
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: var(--bg-colors);
+  padding: 1.5rem 0;
+}
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer__my-github i {
+  vertical-align: bottom;
+}
+.footer a {
+  transition: all 0.3s;
+}
+.footer__my-github a:hover {
+  color: var(--yellow);
+}
+
+.footer__copyright {
+  flex: 0 1 100%;
+  text-align: center;
+}
+.footer__img svg {
+  width: clamp(60px, calc(80 / 1200 * 100vw), 80px);
+}
+.footer__img svg {
+  transition: all 0.5s;
+}
+.footer__img svg:hover {
+  fill: var(--yellow);
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    flex: 0 0 25%;
+  }
+  .footer__my-github {
+    flex: 0 0 25%;
+    text-align: center;
+  }
+  .footer__img {
+    flex: 0 0 25%;
+    text-align: center;
+  }
+}
 
