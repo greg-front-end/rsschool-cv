@@ -1035,3 +1035,38 @@ section {
   }
 }
 
+/*=============== CODE EXAMPLE section ===============*/
+.my-code__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-inner);
+  padding: 1rem 0;
+  border-radius: 6px;
+}
+.my-code__red {
+  color: var(--red);
+}
+.my-code__blue {
+  color: var(--blue);
+}
+.my-code__purple {
+  color: var(--purple);
+}
+.my-code__orange {
+  color: var(--yellow);
+}
+.my-code__yellow {
+  color: var(--yellowBrackets);
+}
+.my-code__white {
+  color: var(--text-color);
+}
+@media screen and (max-width: 767px) {
+  .my-code__inner {
+    justify-content: flex-start;  
+    overflow-x: auto;
+  }
+}
+
+
