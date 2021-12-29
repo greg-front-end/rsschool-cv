@@ -180,4 +180,93 @@ window.addEventListener('DOMContentLoaded', () => {
        localStorage.setItem('selected-icon', getCurrentIcon());
    });
 
+   // ====================== FORM ====================== //
+  // Send on jsonplaceholder page
+  const postData = async (url, data) => {
+    const res = await fetch(url, {
+        method: "POST",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: data
+    });
+
+    return await res.json();
+  };
+  function forms(formSelector) {
+    // AJAX work with back-end and forms
+    const forms = document.querySelectorAll(formSelector);
+    const message = {
+        loading: './images/loading.gif',
+        success: 'Thank you, I will soon call you back',
+        failure: 'Somthing is going wrong...'
+    };
+
+    // using function postData for every forms on site
+    forms.forEach(item => {
+        bindPostData(item);
+    });
+
+    function bindPostData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const blockFomMessage = document.createElement('div');
+            const statusMessage = document.createElement('img');
+            statusMessage.src = message.loading;
+            statusMessage.style.cssText = `
+                display: block;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;`;
+
+            blockFomMessage.style.cssText = `
+            color: #ffffff;
+            margin: 0 auto;
+            width: 100%;`;
+                  
+            blockFomMessage.appendChild(statusMessage);
+            form.insertAdjacentElement('beforeend', blockFomMessage);
+            
+            // create form body for send meassage
+            const formData = new FormData(form);
+            // convert the formData to json
+            const json = JSON.stringify(Object.fromEntries(formData.entries()));
+            // Post data on console
+            postData('https://jsonplaceholder.typicode.com/posts', json)
+            .then((data) => {
+                console.log(data);
+                console.log(json);
+                blockFomMessage.style.cssText = `
+                color: #ffffff;
+                text-align: center;
+                padding: 20px;
+                margin: 20px auto;
+                background-color: darkseagreen;
+                width: 100%;`;
+                blockFomMessage.innerHTML = message.success;
+                setTimeout(() => {
+                  blockFomMessage.remove()
+                }, 7000);
+            }).catch(() => {
+                blockFomMessage.style.cssText = `
+                color: #ffffff;
+                padding: 20px;
+                text-align: center;
+                margin: 20px auto;
+                background-color: tomato;
+                width: 100%;`
+                blockFomMessage.innerHTML = message.failure;
+                setTimeout(() => {
+                  blockFomMessage.remove()
+                }, 5000);
+            }).finally(() => {
+                form.reset();
+            });
+
+        }); 
+    }
+  }
+  forms('form')
+
 });
