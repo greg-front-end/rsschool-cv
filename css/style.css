@@ -331,4 +331,49 @@ section {
   resize: none;
 }
 
+/*=============== HEADER ===============*/
+.header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+/* HEADER__INNER */
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 4px 10px rgba(58, 58, 58, 0.2);
+  background-color: var(--text-color);
+  height: var(--header-height);
+  padding-right: 20px;
+  padding-left: 20px;
+}
+/* HEADER__ITEM-BTN */
+.header__item-btn {
+  box-shadow: -1px 1px 10px var(--text-color);
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 2;
+}
+.header__item-btn:hover {
+  background-color: var(--para-font);
+  color: var(--yellow);
+}
+/* HEADER__NAV */
+.header__nav {
+  width: 100%;
+}
+
 
