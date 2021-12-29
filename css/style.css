@@ -233,4 +233,38 @@ section {
   font-size: clamp(26px, calc(56 / 1200 * 100vw), 56px);
 }
 
+/*=============== BUTTONS ===============*/
+.btn {
+  background-color: var(--yellow);
+  font-size: clamp(0.75rem, calc(10 / 1200 * 100vw), 0.9rem);
+  line-height: 1.5rem;
+  font-weight: var(--font-semi-bold);
+  padding: 0.625rem 2.5rem;
+  color: var(--bg-inner);
+  transition: all 0.3s;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  color: var(--text-color);
+}
+.btn-hire {
+  background-color: var(--yellow_hire-me);
+  color: var(--dark-view);
+  font-weight: var(--font-medium);
+  font-size: clamp(1rem, calc(32 / 1200 * 100vw), 2rem);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-hire:hover {
+  color: var(--text-color);
+}
 
