@@ -1,4 +1,29 @@
-h1 {
-  font-weight: bold;
-  font-size: 36px;
+/*=============== ROOT SETINGS ===============*/
+:root {
+  /*=============== Colors ===============*/
+  --bg-colors: hsla(240, 25%, 95%, 1);
+  --text-color: hsla(0, 0%, 100%, 1);
+  --bg-inner: hsla(0, 0%, 17%, 1);
+  --main-title: hsla(223, 15%, 91%, 1);
+  --yellow: hsla(42, 100%, 50%, 1);
+  --yellow_hire-me: hsla(42, 100%, 50%, 0.95);
+  --dark-view2: hsla(210, 2%, 23%, 1);
+  --dark-view: hsla(210, 3%, 15%, 1);
+  --para-font: hsla(0, 0%, 46%, 1);
+  --red: #FF506D;
+  --purple: #AA77F4;
+  --blue: #54A9FF;
+  --yellowBrackets: #F8D900;
+
+  /*========== Font and typography ==========*/
+  --body-font:  'Trispace', sans-serif;
+  --title-size: 56px;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*=============== Header height ===============*/
+  --header-height: 80px;
 }
