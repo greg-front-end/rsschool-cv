@@ -522,4 +522,136 @@ section {
   opacity: 1;
 }
 
+/*=============== HERO section ===============*/
+.intro {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--header-height);
+}
+/* INTRO__BG-ICONS */
+.intro__bg-icons {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .intro__bg-icons {
+    display: none;
+    display: block;
+    position: absolute;
+    z-index: 2;
+  }
+}
+ /* INTRO__INNER */
+.intro__inner {
+  background-color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap: 1rem;
+  padding: 2rem 0;
+  min-height: 36rem;
+}
+/* INTRO__LEFT */
+.intro__left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+/* INTRO__LEFT-TITLE */
+.intro__left-title {
+  margin-bottom: 1.2rem;
+}
+.intro__left-title span + span {
+  color: var(--yellow);
+}
+.intro__left-title--name {
+  display: block;
+}
+.intro__left-text {
+  margin-bottom: 2.5rem;
+}
+.intro__left-btn i {
+  margin-left: 0.9rem;
+}
+/* INTRO RIGHT */
+.intro__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(50%);
+  opacity: 0;
+}
+.intro__right-img {
+  width: clamp(280px, calc(500 / 1200 * 100vw), 500px);
+}
+.intro__left-text {
+  width: 60%;
+}
+@media screen and (max-width: 768px) {
+  .intro__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 0.9rem;
+    min-height: 36rem;
+  }
+  .intro__right-img {
+    display: block;
+    width: clamp(280px, calc(500 / 1200 * 100vw), 500px);
+  }
+  .intro__left {
+    flex: 0 1 35.25rem;
+  }
+  .intro__left-text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .intro__left {
+    flex-basis: 60%;
+  }
+}
+/*=============== HERO bg-icons ===============*/
+.bg-icon-1 {
+  top: 3rem;
+  left: 4.5rem;
+}
+.bg-icon-2 {
+  top: 5rem;
+  left: 50%;
+}
+.bg-icon-3 {
+  top: 5.3rem;
+  right: 4.75rem;
+}
+.bg-icon-4 {
+  bottom: 4.75rem;
+  left: 10rem;
+}
+.bg-icon-5 {
+  bottom: 9.5rem;
+  left: 33.5rem;
+}
+.bg-icon-6 {
+  bottom: 4.5rem;
+  right: 25rem;
+}
+.bg-icon-7 {
+  bottom: 5.75rem;
+  left: 45rem;
+}
+.bg-icon-8 {
+  bottom: 9.75rem;
+  right: 6rem;
+}
+.bg-icon-9 {
+  top: 7.75rem;
+  left: 9rem;
+}
+.bg-icon-10 {
+  top: 12.75rem;
+  right: 36rem;
+}
+
 
