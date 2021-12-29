@@ -186,4 +186,51 @@ section {
   margin-bottom: 2rem;  
 }
 
+/*=============== TITLES ===============*/
+.title {
+  color: var(--bg-inner);
+  font-family: var(--font-bold);
+  font-size: clamp(1.5rem, calc(32 / 1200 * 100vw), 2.5rem);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.title:before {
+  content: '';
+  bottom: -6px;
+  left: 41%;
+  position: absolute;
+  display: inline-block;
+  background-image: url('../images/intro/4.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+.title:after {
+  content: '';
+  top: -15px;
+  left: 56%;
+  position: absolute;
+  display: inline-block;
+  background-image: url('../images/icons/skills-decor.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+}
+.sub-title {
+  color: var(--dark-view2);
+  font-family: var(--font-medium);
+  text-transform: uppercase;
+}
+.title-intro {
+  font-weight: var(--font-bold);
+  color: var(--bg-inner);
+  font-size: clamp(26px, calc(56 / 1200 * 100vw), 56px);
+}
+
 
