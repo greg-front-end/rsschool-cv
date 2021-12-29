@@ -268,3 +268,39 @@ section {
   color: var(--text-color);
 }
 
+/*=============== ANIMATION ===============*/
+@keyframes slideX {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideY {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.anim-section-x {
+  animation-duration: 1.5s;
+  animation-name: slideX; 
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+.anim-section-y {
+  animation-duration: 1.5s;
+  animation-name: slideY; 
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
