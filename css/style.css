@@ -752,4 +752,126 @@ section {
   padding: 10px 0;
 }
 
+/*=============== ABOUT ME section ===============*/
+.about__inner {
+  background-color: var(--text-color);
+  display: flex;
+  gap: 30px;
+  padding: 0rem 0.9rem 1.5rem;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.about__right {
+  flex-basis: 100%;
+  margin-top: 2.1rem;
+  z-index: 2;
+}
+.about__btn-block {
+  text-align: right;
+}
+.about__btn {
+  outline: none;
+  border: 0;
+  margin-top: 2rem;
+  display: inline-block;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .about__left {
+    flex: 0 0 40%;
+    display: block;
+    max-width: 40%;
+    z-index: 0;
+  }
+  .about__left img {
+    transform: translateY(1.4rem);
+  }
+  .about__right {
+    flex: 0 1 60%;
+  }
+  .about__btn {
+    margin-right: 2rem;
+  }
+  .about__btn i {
+    margin-left: 0.3rem;
+    vertical-align: bottom;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__left {
+    max-width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  .about__left img {
+    position: relative;
+    top: 30px;
+    border-radius: 50%;
+  }
+  .about__btn-block {
+    text-align: center;
+  }
+}
+.about__name {
+  font-size: clamp(1.25rem, calc(18 / 1200 * 100vw), 1.4rem);
+  font-family: var(--font-medium);
+  color: var(--bg-inner);
+  text-transform: uppercase;
+}
+.about__prof {
+  font-size: clamp(0.8rem, calc(14 / 1200 * 100vw), 0.9rem);
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+.about__social {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.about__social i:not(:last-child) {
+  margin-right: 1rem;
+}
+.about__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  width: 28px;
+  height: 28px;
+  color: var(--bg-inner);
+  background-color: var(--yellow);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.about__link svg {
+  transition: all 0.3s;
+}
+.about__link:hover svg {
+  fill: var(--text-color);
+}
+.about__link:not(:last-child) {
+  margin-right: 1rem;
+}
+.about__link:hover {
+  color: var(--text-color);
+}
+.about__text {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  white-space: pre-line;
+  text-align: left;
+  line-height: 1.6rem;
+  padding-bottom: 1.8rem;
+}
+
 
