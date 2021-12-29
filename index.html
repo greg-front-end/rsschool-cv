@@ -365,6 +365,23 @@
         </div>
       </div>
     </section>
+    <!-- ============ CODE EXAMPLE ============ -->
+    <section class="my-code" id="code-example">
+      <div class="container">
+        <h2 class="my-code__title title">Code example</h2>
+        <pre class="my-code__inner">
+            <code class="my-code__js">
+              <span class="my-code__red">function </span><span class="my-code__purple">dataReverse</span><span class="my-code__yellow">(</span><span class="my-code__orange">data</span><span class="my-code__yellow">) </span><span class="my-code__yellow">{</span>
+                <span class="my-code__red">const </span><span class="my-code__blue">reverseDataArr </span><span class="my-code__red">= </span><span class="my-code__purple">[]</span>
+                <span class="my-code__red">for </span><span class="my-code__purple">(</span><span class="my-code__red">let </span><span class="my-code__white">i </span><span class="my-code__red">= </span><span class="my-code__blue">0</span><span class="my-code__white">; </span><span class="my-code__white">i </span><span class="my-code__red">&lt; </span><span class="my-code__orange">data</span><span class="my-code__white">.</span><span class="my-code__blue">length</span><span class="my-code__white">; </span><span class="my-code__white">i </span><span class="my-code__red">+= </span><span class="my-code__blue">8</span><span class="my-code__purple">) </span><span class="my-code__purple">{</span>
+                  <span class="my-code__purple">reverseDataArr</span><span class="my-code__white">.</span><span class="my-code__purple">unshift</span><span class="my-code__blue">(</span><span class="my-code__red">...</span><span class="my-code__orange">data</span><span class="my-code__white">.</span><span class="my-code__purple">slice</span><span class="my-code__yellow">(</span><span class="my-code__white">i, i </span><span class="my-code__red">+ </span><span class="my-code__blue">8</span><span class="my-code__yellow">)</span><span class="my-code__blue">)</span>
+                <span class="my-code__purple">}</span>
+                <span class="my-code__red">return </span><span class="my-code__blue">reverseDataArr</span>
+              <span class="my-code__yellow">}</span>
+            </code>
+          </pre>
+      </div>
+    </section>
   </main>
 
 </body>
