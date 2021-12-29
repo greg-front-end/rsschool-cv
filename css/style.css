@@ -181,3 +181,9 @@ body.dark-theme .footer__rss-link-js {
   }
 }
 
+/*=============== SECTION ===============*/
+section {
+  margin-bottom: 2rem;  
+}
+
+
