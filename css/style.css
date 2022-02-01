@@ -1005,6 +1005,7 @@ section {
   transform: translateY(0);
 }
 .portf__item-img {
+  object-fit: cover;
   min-width: 18.75rem;
   min-height: 9.375rem;
   width: 100%;
