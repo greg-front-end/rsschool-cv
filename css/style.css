@@ -1102,7 +1102,7 @@ section {
   border-radius: 2px;
   object-position: -5rem;
 }
-@media screen and (max-width: 467px) {
+@media screen and (max-width: 767px) {
   .hire__right {
     display: none;
   }
@@ -1115,10 +1115,10 @@ section {
 }
 @media screen and (min-width: 768px) {
   .hire__left {
-    flex: 0 0 44%;
+    flex: 0 0 54%;
   }
   .hire__right {
-    flex: 0 0 44%;
+    flex: 0 0 34%;
     display: block;
     max-height: 492px;
   }
