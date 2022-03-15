@@ -179,6 +179,10 @@ body.dark-theme .footer__rss-link-js {
   body.dark-theme .ri-contrast-2-fill:hover {
     color: var(--yellow)
   }
+  body.dark-theme .nav__list {
+    background-color: var(--dark-view);
+    color: var(--text-color);
+  }
 }
 
 /*=============== SECTION ===============*/
@@ -1099,6 +1103,9 @@ section {
   object-position: -5rem;
 }
 @media screen and (max-width: 467px) {
+  .hire__right {
+    display: none;
+  }
   .form {
     padding: 0;
   }
