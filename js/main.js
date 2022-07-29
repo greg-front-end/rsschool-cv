@@ -76,6 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const css = document.querySelector('.skills__css');
   const js = document.querySelector('.skills__js');
   const nodeJs = document.querySelector('.skills__nodejs');
+  const react = document.querySelector('.skills__react');
   const skillsValue = document.querySelectorAll('.skills__value');
   // GET VALUES FROM SKILLS 
   let widthVal = [];
@@ -96,7 +97,8 @@ window.addEventListener('DOMContentLoaded', () => {
         html.style.cssText = `opacity: 1; width: ${widthVal[0]};`
         css.style.cssText = `opacity: 1; width: ${widthVal[1]};`
         js.style.cssText = `opacity: 1; width: ${widthVal[2]};`
-        nodeJs.style.cssText = `opacity: 1; width: ${widthVal[3]};`
+        react.style.cssText = `opacity: 1; width: ${widthVal[3]};`
+        nodeJs.style.cssText = `opacity: 1; width: ${widthVal[4]};`
       }, 200)
 
       observer.unobserve(entry.target);
